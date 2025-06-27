@@ -4,7 +4,7 @@ library(ggplot2)
 library(ggrepel)
 library(patchwork)
 
-
+#load 6 datasets separately, downloaded from public database, create Seurat object
 load("./seurat_object1.Rda")
 load("./seurat_object2.Rda")
 load("./seurat_object3.Rda")
@@ -50,6 +50,6 @@ marker = c("CD79A","CD79B","XBP1",
 #cell annotation
 DotPlot(object = merged_obj, features = marker) + RotatedAxis()
 
-save(merged_obj, file ="/integrated_seurat_object.Rda")
+save(merged_obj, file ="/all_integrated_harmony.Rda")
 
 
